@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "name": "ai-turtle-soup-game",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/"
+    }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "env": {
+    "VITE_API_URL": {
+      "description": "后端API地址，例如：https://your-backend.vercel.app",
+      "value": ""
+    }
+  }
+}

@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+/* 梵高星空主题背景 - 罗纳河上的星空效果 */
+.starry-night-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #0a0e2a, #1a1f4b, #2d3b6b);
+}
+
+/* 星光图层 */
+.starry-night-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(15px 15px at 10% 20%, #FFD700 50%, transparent 50%),
+    radial-gradient(10px 10px at 20% 30%, #FFED4E 50%, transparent 50%),
+    radial-gradient(20px 20px at 30% 40%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(10px 10px at 40% 50%, #FFDB58 50%, transparent 50%),
+    radial-gradient(15px 15px at 50% 60%, #FFD700 50%, transparent 50%),
+    radial-gradient(10px 10px at 60% 70%, #FFED4e 50%, transparent 50%),
+    radial-gradient(25px 25px at 70% 80%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(10px 10px at 80% 90%, #FFDB58 50%, transparent 50%),
+    radial-gradient(15px 15px at 90% 10%, #FFD700 50%, transparent 50%),
+    radial-gradient(20px 20px at 15% 15%, #FFED4E 50%, transparent 50%),
+    radial-gradient(10px 10px at 25% 25%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(15px 15px at 35% 35%, #FFDB58 50%, transparent 50%),
+    radial-gradient(10px 10px at 45% 45%, #FFD700 50%, transparent 50%),
+    radial-gradient(20px 20px at 55% 55%, #FFED4E 50%, transparent 50%),
+    radial-gradient(10px 10px at 65% 65%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(15px 15px at 75% 75%, #FFDB58 50%, transparent 50%),
+    radial-gradient(10px 10px at 85% 85%, #FFD700 50%, transparent 50%),
+    radial-gradient(25px 25px at 95% 95%, #FFED4E 50%, transparent 50%),
+    radial-gradient(15px 15px at 5% 50%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(10px 10px at 95% 30%, #FFDB58 50%, transparent 50%),
+    radial-gradient(20px 20px at 50% 10%, #FFD700 50%, transparent 50%),
+    radial-gradient(10px 10px at 70% 30%, #FFED4E 50%, transparent 50%),
+    radial-gradient(15px 15px at 30% 70%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(10px 10px at 80% 60%, #FFDB58 50%, transparent 50%),
+    radial-gradient(20px 20px at 20% 80%, #FFD700 50%, transparent 50%),
+    radial-gradient(10px 10px at 40% 90%, #FFED4E 50%, transparent 50%),
+    radial-gradient(15px 15px at 60% 20%, #FFFFFF 50%, transparent 50%),
+    radial-gradient(10px 10px at 10% 60%, #FFDB58 50%, transparent 50%),
+    radial-gradient(25px 25px at 90% 70%, #FFD700 50%, transparent 50%),
+    radial-gradient(10px 10px at 50% 80%, #FFED4E 50%, transparent 50%);
+  background-size: 100% 100%;
+  animation: star-twinkle 4s infinite alternate;
+}
+
+/* 星光闪烁动画 */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* 波纹效果 - 模拟水面反射 */
+.starry-night-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(26, 31, 75, 0.8), transparent);
+  mask-image: linear-gradient(to top, black 20%, transparent 100%);
+}
+
+/* 迷雾效果 */
+.mist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+  animation: mist-drift 20s infinite linear;
+  z-index: 1;
+}
+
+@keyframes mist-drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-10px, 5px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(5px, -10px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate(10px, 5px) rotate(0.5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* 增加动态星星 */
+.starry-night-bg .star {
+  position: absolute;
+  background-color: #ffd700;
+  border-radius: 50%;
+  animation: star-pulse 3s infinite alternate;
+}
+
+@keyframes star-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* 增强的内容区域卡片背景透明度 */
+.starry-night-content {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* 交互动画效果 */
+
+/* 按钮点击动画 */
+.btn-press {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-press:active {
+  transform: scale(0.95);
+}
+
+/* 卡片悬停动画 */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 淡入动画 */
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 滑动动画 */
+.slide-in-up {
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 摇晃动画 - 用于错误状态 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* 打字机效果 */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
+
+/* 平滑滚动 */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  /* 增加触摸目标大小 */
+  button,
+  [role="button"],
+  .btn-press {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* 改善输入框触摸体验 */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* 防止iOS缩放 */
+  }
+
+  /* 改善卡片间距 */
+  .card-hover {
+    margin-bottom: 1rem;
+  }
+
+  /* 改善toast位置 */
+  .fixed.top-4.right-4 {
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  /* 移除悬停效果，使用激活状态 */
+  .card-hover:hover {
+    transform: none;
+  }
+
+  /* 增加点击反馈 */
+  .btn-press:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}

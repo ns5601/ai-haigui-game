@@ -1,0 +1,117 @@
+[
+  {
+    "id": "story_1",
+    "title": "电梯里的陌生人",
+    "surface": "一个人走进电梯，看到里面有一个陌生人。他按了10楼，陌生人按了5楼。电梯到达5楼时，陌生人出去了。这个人到了10楼后，突然意识到什么，立即报警。为什么？",
+    "bottom": "这个人注意到陌生人的手上有血迹，并且按了5楼（停尸房所在的楼层）。他怀疑陌生人可能与医院里的案件有关。",
+    "difficulty": "easy",
+    "category": "mystery",
+    "tags": ["电梯", "陌生人", "报警"],
+    "estimatedTime": 5,
+    "hints": [
+      "注意陌生人的特征",
+      "考虑电梯所在的环境",
+      "5楼可能有什么特殊的地方？"
+    ],
+    "author": "curated",
+    "rating": 4.5,
+    "playCount": 0,
+    "winRate": 0,
+    "createdAt": 1672531200000,
+    "updatedAt": 1672531200000,
+    "locale": "zh-CN",
+    "version": 1
+  },
+  {
+    "id": "story_2",
+    "title": "消失的咖啡",
+    "surface": "一个人在办公室煮了一杯咖啡，放在桌上。他离开座位去接了个电话，回来时咖啡不见了。办公室里只有他和另外两个同事，但他们都声称没碰过咖啡。咖啡去哪了？",
+    "bottom": "咖啡被清洁工收走了。清洁工以为杯子是空的或者没人要的，所以清理掉了。",
+    "difficulty": "easy",
+    "category": "everyday",
+    "tags": ["办公室", "咖啡", "消失"],
+    "estimatedTime": 3,
+    "hints": [
+      "考虑办公室的日常工作流程",
+      "除了同事，还有谁可能进入办公室？",
+      "清洁工作通常什么时候进行？"
+    ],
+    "author": "curated",
+    "rating": 4.0,
+    "playCount": 0,
+    "winRate": 0,
+    "createdAt": 1672617600000,
+    "updatedAt": 1672617600000,
+    "locale": "zh-CN",
+    "version": 1
+  },
+  {
+    "id": "story_3",
+    "title": "雨夜车祸",
+    "surface": "一个雨夜，发生了一起车祸。司机声称他是因为躲避突然冲到路上的鹿才撞车的。但警察到达现场后，立即逮捕了司机。为什么？",
+    "bottom": "事故发生在沙漠地区，那里根本没有鹿。司机在撒谎，可能涉及酒驾或其他违法行为。",
+    "difficulty": "medium",
+    "category": "mystery",
+    "tags": ["车祸", "雨夜", "警察"],
+    "estimatedTime": 7,
+    "hints": [
+      "注意事故地点",
+      "考虑当地的环境和动物分布",
+      "司机的陈述有什么不合理之处？"
+    ],
+    "author": "curated",
+    "rating": 4.7,
+    "playCount": 0,
+    "winRate": 0,
+    "createdAt": 1672704000000,
+    "updatedAt": 1672704000000,
+    "locale": "zh-CN",
+    "version": 1
+  },
+  {
+    "id": "story_4",
+    "title": "图书馆的死亡",
+    "surface": "一个人在图书馆被发现死亡。他手里拿着一本书，周围没有挣扎痕迹。警察发现书页间夹着一张纸条，上面写着'42'。死因是什么？",
+    "bottom": "死者有严重的心脏病。'42'是他服用的药物剂量（42mg），但他误服了过量的药物导致心脏骤停。书是他正在阅读的药物说明书。",
+    "difficulty": "hard",
+    "category": "mystery",
+    "tags": ["图书馆", "死亡", "数字谜题"],
+    "estimatedTime": 10,
+    "hints": [
+      "注意死者手中的书",
+      "数字'42'可能代表什么？",
+      "考虑医疗相关的情况"
+    ],
+    "author": "curated",
+    "rating": 4.9,
+    "playCount": 0,
+    "winRate": 0,
+    "createdAt": 1672790400000,
+    "updatedAt": 1672790400000,
+    "locale": "zh-CN",
+    "version": 1
+  },
+  {
+    "id": "story_5",
+    "title": "时光旅行者的信件",
+    "surface": "一个人收到一封来自未来的信，信上准确地预测了接下来一周发生的三件事。他按照信中的建议行动，避免了一场灾难。但他最后还是报警了。为什么？",
+    "bottom": "寄信人就是他本人。他有严重的健忘症，这封信是他自己在记忆清醒时写给未来的自己的提醒。他报警是因为意识到自己的病情严重。",
+    "difficulty": "hard",
+    "category": "scifi",
+    "tags": ["时光旅行", "信件", "预测"],
+    "estimatedTime": 12,
+    "hints": [
+      "考虑谁最可能知道这些预测",
+      "信件的来源可能比看起来更近",
+      "为什么收到准确的预测后要报警？"
+    ],
+    "author": "curated",
+    "rating": 4.8,
+    "playCount": 0,
+    "winRate": 0,
+    "createdAt": 1672876800000,
+    "updatedAt": 1672876800000,
+    "locale": "zh-CN",
+    "version": 1
+  }
+]
