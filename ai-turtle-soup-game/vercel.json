@@ -22,11 +22,5 @@
   ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "env": {
-    "VITE_API_URL": {
-      "description": "Railway后端API地址，例如：https://your-project.up.railway.app",
-      "value": ""
-    }
-  }
+  "framework": "vite"
 }
