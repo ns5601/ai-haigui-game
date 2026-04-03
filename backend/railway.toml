@@ -1,11 +1,14 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install"
+buildCommand = "npm ci --only=production"
 
 [deploy]
 startCommand = "npm start"
 healthcheckPath = "/api/test"
-port = 3000
+healthcheckTimeout = 30
+restartPolicyType = "on_error"
+restartPolicyMaxRetries = 3
 
 [variables]
 PORT = "3000"
+NODE_ENV = "production"

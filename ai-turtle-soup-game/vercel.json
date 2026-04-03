@@ -15,8 +15,9 @@
       "handle": "filesystem"
     },
     {
-      "src": "/.*",
-      "dest": "/"
+      "src": "/(.*)",
+      "dest": "/",
+      "status": 200
     }
   ],
   "buildCommand": "npm run build",
@@ -24,7 +25,7 @@
   "framework": "vite",
   "env": {
     "VITE_API_URL": {
-      "description": "后端API地址，例如：https://your-backend.vercel.app",
+      "description": "Railway后端API地址，例如：https://your-project.up.railway.app",
       "value": ""
     }
   }
